@@ -23,3 +23,26 @@ function sumRange(num) {
     return num + sumRange(num - 1);
 }
 console.log(sumRange(10));
+
+
+// iterative factorial function
+function iterativeFactorial(num) {
+    let total  = 1;
+    for (let i = 0; i < num; i++) {
+        total *= i;
+    }
+    return total;
+}
+
+
+// recursive factorial function
+function factorial(num) {
+    if(num === 0) return 1;
+    if(num === 1) return 1;
+    return num * sumRange(num - 1);
+}
+console.log(factorial(0));
+
+
+
+// RECURSION PITFALLS!
