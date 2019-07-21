@@ -21,9 +21,15 @@ class Student {
         return this.scores;
     }
     calculateAverage() {
-        if (this.scores.length === 0) return 'There are no scores to average';
+        if (this.scores.length === 0) return 'There are no scores to average.';
         let sum = this.scores.reduce((a, b) => a + b);
         return Math.round(sum / this.scores.length);
+    }
+
+    // STATIC/CLASS METHOD!
+    // more of a utility function, doesnt access any particular instance (this.property)
+    static enrollStudents() {
+        return 'ENROLLING ALL REGISTERED STUDENTS...'
     }
 }
 
@@ -38,3 +44,7 @@ console.log(firstStudent.addScore(87));
 console.log(firstStudent.addScore(94));
 console.log(firstStudent.calculateAverage());
 console.log(firstStudent);
+
+// firstStudent.enrollStudents() will NOT work! 
+// individual instances cannot access static (class) methods
+Student.enrollStudents();
