@@ -18,17 +18,13 @@ let cities = ["Aberdeen", "Abilene", "Akron", "Albany", "Albuquerque", "Alexandr
 function binarySearch(arr, val) {
     let rightPointer = 0;
     let leftPointer = arr.length - 1;
-    while (rightPointer < leftPointer) {
-        let middlePointer = Math.ceil((rightPointer + leftPointer) / 2);
-        if (arr[middlePointer] > val) {
-            leftPointer = middlePointer;
-        } else if (arr[middlePointer] === val) {
-            return middlePointer;
-        } else {
-            rightPointer = middlePointer;
-        }
+    let middlePointer = Math.floor((rightPointer + leftPointer) / 2);
+    while (arr[middlePointer] !== val && rightPointer <= leftPointer) {
+        if (arr[middlePointer] > val) leftPointer = middlePointer - 1;
+        else rightPointer = middlePointer + 1;
+        middlePointer = Math.floor((rightPointer + leftPointer) / 2);
     }
-    return -1
+    return arr[middlePointer] === val ? middlePointer : -1;
 }
 
 console.log(binarySearch(states, 'Delaware'));
