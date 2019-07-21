@@ -21,12 +21,24 @@ class SinglyLinkedList {
         this.length = 0;
     }
     push(val) {
-        let node = new Node(val)
-        if (this.head === null) {
+        let node = new Node(val);
+        if (!this.head) {
             this.head = node;
             this.tail = node;
         }
-        else this.tail.next = node;
+        else {
+            this.tail.next = node;
+            this.tail = node;
+        }
+        this.length += 1;
+        return this;
     }
 }
 let list = new SinglyLinkedList();
+console.log(list);
+list.push('Hello');
+console.log(list);
+list.push('World');
+console.log(list);
+list.push('Goodbye');
+console.log(list);
