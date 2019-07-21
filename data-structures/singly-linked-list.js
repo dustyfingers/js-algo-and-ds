@@ -33,12 +33,30 @@ class SinglyLinkedList {
         this.length += 1;
         return this;
     }
+
+    pop() {
+        if (!this.head) return undefined;
+        var current = this.head;
+        var newTail = current;
+        while (current.next) {
+            newTail = current;
+            current = current.next;
+        }
+        this.tail = newTail;
+        this.tail.next = null;
+        this.length--;
+        if (this.length === 0) {
+            this.head = null;
+            this.tail = null;
+        }
+        return current;
+    }
 }
 let list = new SinglyLinkedList();
-console.log(list);
 list.push('Hello');
 console.log(list);
 list.push('World');
-console.log(list);
 list.push('Goodbye');
+console.log(list);
+list.pop();
 console.log(list);
