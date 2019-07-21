@@ -12,14 +12,13 @@ let string = 'omg lol haha zomg haha teehee uwu aha! omg! lol haha bazinga! omg 
 
 function naiveStringSearch(lgString, pattern) {
     let matchCount = 0;
-    let letters = [];
     for (let i = 0; i < lgString.length; i++) {
-        letters.push(lgString.charAt(i));
-        for (let i = 0; i < pattern.length; i++) {
-            letters.push(pattern.charAt(i));
+        for (let j = 0; j < pattern.length; j++) {
+            if (pattern[j] !== lgString[i + j]) break;
+            if (j === pattern.length - 1) matchCount++;
         }
     }
-    return letters;
+    return matchCount;
 }
 
 console.log(naiveStringSearch(string, 'omg'));
