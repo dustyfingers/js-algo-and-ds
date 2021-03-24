@@ -1,0 +1,17 @@
+what is big o?
+a numerical representation of how efficient a piece of code is
+
+why is it important?
+having an efficient algorithm can save a considerable amount of computing power on large datasets, among other things
+big o notation gives us the language we need to talk about how the runtime of an algorithm grows as the inputs grow 
+big o is a way to *formalize fuzzy counting*
+
+what are the basic rules for counting big O?
+1. arithmetic operations and assignment are constant
+2. accessing elements in an array by index or the values of an object by key is constant
+3. in a loop the complexity is the length of the loop times the complexity of whatever happens inside the loop
+
+now about space complexity!!!
+1. most primitives are constant space (bools, numbers, undefined) (doesnt matter if 1 or 10000, stored in same 'primitive' size box)
+2. strings require O(n) space where n is the strings length. (50 chars take 50x as much space as 1 char length)
+3. references are generally O(n) where n is the number of indices (whether in an array or an object)
