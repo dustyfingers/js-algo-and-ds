@@ -1,0 +1,9 @@
+why use recursion?
+its used everywhere irl! (JSON.parse, JSON.stringify, document.GetElementById, dom traversal algorithms, etc)
+its often cleaner!
+it is used with more complex data structures!
+
+a process or function is reursive if it calls *itself*
+recursive functions have:
+1. a base case to terminate calls
+2. a different input each time the function is called

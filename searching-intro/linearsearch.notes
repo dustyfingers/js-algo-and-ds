@@ -1,0 +1,15 @@
+what is the big o of linear search?
+
+const linearSearch = (arr, val, res = -1) => {
+    arr.forEach((item, i) => {
+        if (item === val) res = i;
+    });
+    return res;
+}
+
+for each item you perform a constant number of operations.
+(in this case one check for value)
+as n grows is this instance the number of computations grows but it grows 
+by a constnant rate
+
+linear search has a runtime that can be best described using O(n)

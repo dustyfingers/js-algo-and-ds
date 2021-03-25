@@ -1,0 +1,6 @@
+what is a call stack?
+its made from a data structure called a stack
+
+any time a function is invoked it is pushed to the top of the call stack
+when the javascript interpreter sees the return keyword or when the function codeblock ends
+the js interpreter removes the function from the call stack
