@@ -1,0 +1,3 @@
+this pattern uses an object to collect values and their frequency 
+
+it can avoid the need for nested loops and generally has an O(n) runtime

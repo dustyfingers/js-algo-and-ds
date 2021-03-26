@@ -1,0 +1,23 @@
+objects consist of unordered, key-value pairs
+when to use objects?
+- dont need order
+- fast access/insertion and removal
+how fast?
+CONSTANT TIME O(1)!!! for insertion, removal and access
+O(n) for searching (still not bad!)
+
+
+arrays are ordered lists of items, called elements
+when to use arrays?
+when you need order!
+arrays are constant time at neary everything except inserting *at the beginning of the array*
+when you insert or remove *at the beginning of the array* the js engine must do n reassignments to
+fix the index of every subsequent element in the array (what was element 0 becomes element 1 and so on, for n, the length of the array)
+this means inserting at the beginning of the array is O(n) runtime
+
+
+big o of built in array methods?
+push, pop - O(1) (add/remove to end of array - no reindexing involved)
+shift, unshift  - O(n) (add/remove to beginning of array, reindexing involved)
+...pretty much everything else (concat, splice, slice, forEach, map, filter, reduce, etc)- O(n)
+sort - O(n * log n)
