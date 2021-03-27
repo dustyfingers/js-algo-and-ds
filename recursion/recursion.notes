@@ -7,3 +7,8 @@ a process or function is reursive if it calls *itself*
 recursive functions have:
 1. a base case to terminate calls
 2. a different input each time the function is called
+
+common recursion pitfalls!
+1. missing a base case!! (or base case isnt doing what you think it is doing)
+2. forgetting to return a  or returning the wrong thing
+problems with recursion can commonly cause a stack overflow!
