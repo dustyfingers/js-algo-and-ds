@@ -1,0 +1,11 @@
+
+BINARY SEARCH!
+ONLY WORKS ON SORTED ARRAYS
+ELIMINATE HALF REMAINING ELEMENTS PER STEP INSTEAD OF ONE PER STEP!
+
+divide and conquer is the name of the game!
+pick halfway point in array,
+check if item is after or before your midpoint in array
+if item is before, throw out array elements after midpoint
+find a new midpoint between your old midpoint and the beginning of the array
+repeat step 2-4 until item matches
