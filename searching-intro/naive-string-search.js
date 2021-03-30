@@ -10,11 +10,11 @@ let string = 'omg lol haha zomg haha teehee uwu aha! omg! lol haha bazinga! omg 
 // if complete inner loop, found match! increment the count of matched strings
 // if complete outer loop, return count of matches
 
-function naiveStringSearch(lgString, pattern) {
+function naiveStringSearch(str, pattern) {
     let matchCount = 0;
-    for (let i = 0; i < lgString.length; i++) {
+    for (let i = 0; i < str.length; i++) {
         for (let j = 0; j < pattern.length; j++) {
-            if (pattern[j] !== lgString[i + j]) break;
+            if (pattern[j] !== str[i + j]) break;
             if (j === pattern.length - 1) matchCount++;
         }
     }

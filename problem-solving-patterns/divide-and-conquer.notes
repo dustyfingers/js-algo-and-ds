@@ -1,0 +1,6 @@
+this pattern involves dividing a larger dataset into smaller chunks
+and then repeating a process with each subset of data
+
+this pattern can decrease time complexity significantly
+
+a lot of sorting algorithms use this pattern so we will cover it in detail later!
