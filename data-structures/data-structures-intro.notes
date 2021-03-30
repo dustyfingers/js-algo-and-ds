@@ -1,0 +1,23 @@
+so what are data structures?
+data structures are collections of values, the relationships among them, 
+and the operations and functions that can be applied to the data
+
+why are there so many of them??
+different data strucures excel at different things. some data structures are very specific
+while some are pretty generalized, like an array on an object
+
+why do i care?
+you already use them and are likely to need to use a more advanced custrom data structure 
+the longer you spend as a developer! also, interviews!
+
+working with map/location data?
+use a graph!
+
+need an ordered list but need fast removal and insertion at the beginning AND the end?
+use a linked list!
+
+web scraping html?
+use a tree!
+
+need to write a scheduler?
+use a binary heap!

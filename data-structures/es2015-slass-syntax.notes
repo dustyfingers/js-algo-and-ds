@@ -1,0 +1,6 @@
+what is a class?
+a blueprint for creating objects with predefined 
+properties and methods
+
+es2015 class syntax does not use true object oriented inheritance, it is rather just 
+syntactical sugar over javascripts prototypal inheritance system
