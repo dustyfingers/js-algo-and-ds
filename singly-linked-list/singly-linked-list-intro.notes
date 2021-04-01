@@ -1,0 +1,9 @@
+what is a singly linked list?
+a linked list is a data structure, it stores anything you want
+its ordered, like an array
+BUT!
+in an array each element is indexed, with a number usually starting at 0
+whereas in a linked list have no indices on their elements...each element instead has a pointer 
+to the next element (or null if its the last element)...youll see
+
+how is it similar to the list we already know...the array!?
