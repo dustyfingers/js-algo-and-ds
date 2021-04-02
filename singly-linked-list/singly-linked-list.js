@@ -47,7 +47,7 @@ class SinglyLinkedList {
     // pop removes the last node from the linked list and returns it
     pop() {
         // short circuit
-        if (!this.head) return undefined;
+        if (!this.head) return null;
 
         let current = this.head;
         let deletedItem;
@@ -77,12 +77,52 @@ class SinglyLinkedList {
     // shift removes a node from the beginning from the linked list
     shift() {
         // short circuit
-        if (!this.head) return undefined;
+        if (!this.head) return null;
         let current = this.head;
 
         this.head = current.next;
         this.length--;
         return current;
+    }
+
+    // unshift adds an item to the beginning of the linked list
+    unshift(item) {
+        let newNode = new Node(item);
+
+        if (!this.head) {
+            this.head = newNode;
+            this.tail = this.head;
+        } else {
+            newNode.next = this.head;
+            this.head = newNode;
+        }
+
+        this.length++;
+        return this;
+    }
+
+    // get retrieves an item held in the linked list using a given position 
+    get(index) {
+        // short circuit
+        if ((index < 0) || (index > this.length)) return null;
+
+        let current = this.head; 
+        for (let i = 0; i < index; i++) current = current.next;
+
+        return current;
+    }
+
+    // set changes an item in the linked list given a value and a position, and 
+    // returns true or false if was found and edited or not
+    set(value, index) {
+        let foundNode = this.get(index);
+
+        if (foundNode) {
+            current.val = value;
+            return true;
+        }
+
+        return false;
     }
 }
 
@@ -105,3 +145,13 @@ console.log(list.push("here!"));
 
 console.log(list.shift());
 console.log(list);
+
+console.log(list.unshift("random!"));
+console.log(list);
+
+let emptyList = new SinglyLinkedList();
+console.log(emptyList.unshift("random!"));
+console.log(emptyList);
+
+console.log(list.get(0));
+console.log(list.set(300, 2));
