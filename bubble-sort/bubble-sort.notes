@@ -4,7 +4,7 @@ there are use casses where it excels though!
 its a good algorithm to write and optimize!
 
 whats the idea behind bubble sort?
-the largest/smallest values 'bubble' to the top!
+the largest values 'bubble' to the top!
 
 we start with the first two items, and as we loop through the items we compare the two values
-and we put the largest/smallest item (whichever we are sorting for) first
+and we put the largest item (whichever we are sorting for) first

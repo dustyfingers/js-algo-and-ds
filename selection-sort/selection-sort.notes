@@ -1,0 +1,9 @@
+what is selection sort?
+selectino sort is similar to bubble sort,
+but instead of first placing large values into sorted position, it places small values to sorted position
+
+we start at the beginning and look for the smallest value, then put that in the front
+reiterate
+
+selection sort is better than bubble sort in that you do make less 'swaps'
+so if you are in a spot where writing to memory  is extremely expensive it could be a good usecase for selection sort

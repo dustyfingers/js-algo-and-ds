@@ -1,0 +1,5 @@
+pretty similiar to seleciton sort and bubble sort!
+
+insertion sort works by gradually building up a larger half (from the beginning)
+which is sorted, and inserting the next item to be sorted into that already sorted half
+

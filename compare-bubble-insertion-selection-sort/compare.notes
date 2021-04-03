@@ -1,0 +1,5 @@
+bubble, insertion and seleciton sort together are often called the quadratic sort algorithms
+becuase their time complexity are all O(n^2)
+their space compexity is constant O(1)
+
+sorting is fundamental to progrmaming and common in interviews! learn it pretty well!
