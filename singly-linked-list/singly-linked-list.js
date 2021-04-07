@@ -86,8 +86,8 @@ class SinglyLinkedList {
     }
 
     // unshift adds an item to the beginning of the linked list
-    unshift(item) {
-        let newNode = new Node(item);
+    unshift(value) {
+        let newNode = new Node(value);
 
         if (!this.head) {
             this.head = newNode;
@@ -118,11 +118,62 @@ class SinglyLinkedList {
         let foundNode = this.get(index);
 
         if (foundNode) {
-            current.val = value;
+            foundNode.val = value;
             return true;
         }
 
         return false;
+    }
+    
+    // TODO: think there is an error here
+    // insert adds a new value at whatever position is specified
+    insert(value, index) {
+        // short circuit
+        if (index < 0 || index > this.length) return false;
+
+        if (index === this.length) !!this.push(value);
+        if (index === 0) !!this.unshift(value);
+
+        let prevNode = this.get(index - 1);
+        let nextNode = this.get(index + 1);
+        let newNode = new Node(value);
+
+        prevNode.next = newNode;
+        newNode.next = nextNode;
+
+        this.length++;
+        return true;
+    }
+
+    // TODO: or here
+    // remove takes in an index and removes the item at that index
+    remove(index) {
+        if (index < 0 || index >= this.length) return false;
+        if (index === 0) !!this.shift();
+        if (index === this.length - 1) !!this.pop();
+
+        let prevNode = this.get(index - 1);
+        let nodeToDel = this.get(index);
+        prevNode.next = nodeToDel.next;
+        this.length--;
+        return true;
+    }
+
+    // reverse takes a singly linked list and reverses it in place!
+    reverse() {
+        let node = this.head;
+        this.head = this.tail;
+        this.tail = node;
+        let next;
+        let prev = null;
+        for (let i = 0; i < this.length; i++) {
+            next = node.next;
+            node.next = prev;
+            prev = node;
+            node = next;
+        }
+
+        return this;
     }
 }
 
@@ -143,15 +194,21 @@ console.log(list.push("random!"));
 console.log(list.push("junk"));
 console.log(list.push("here!"));
 
-console.log(list.shift());
-console.log(list);
+console.log(list.reverse())
 
-console.log(list.unshift("random!"));
-console.log(list);
+// console.log(list.shift());
+// console.log(list);
 
-let emptyList = new SinglyLinkedList();
-console.log(emptyList.unshift("random!"));
-console.log(emptyList);
+// console.log(list.unshift("random!"));
+// console.log(list);
 
-console.log(list.get(0));
-console.log(list.set(300, 2));
+// let emptyList = new SinglyLinkedList();
+// console.log(emptyList.unshift("random!"));
+// console.log(emptyList);
+
+// console.log(list.get(0));
+// console.log(list.set(300, 2));
+
+// list.insert(33, 1);
+// list.insert(23, 1);
+// console.log(list);
