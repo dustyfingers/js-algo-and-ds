@@ -1,0 +1,13 @@
+every node has a pointer to the previous AND the next node, instead of only the next node
+this makes some operations much more efficient when compared to the singly linked list, however 
+there is a tradeoff with memory
+
+node
+-prev
+-next
+-val
+
+doublylinkedlist
+-head
+-tail
+-length

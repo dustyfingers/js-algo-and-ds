@@ -1,0 +1,4 @@
+like merge sort, quick sort exploits the fact that arrays of length 0 or 1 are always sorted
+
+works by picking a 'pivot' point and sorting the other elements around the element at that pivot index,
+then doing that process on a smaller bit of the array again
