@@ -1,0 +1,40 @@
+what is a tree?
+a tree is a data structure that consists of nodes in a parent/child relationship
+
+how are trees and lists different?
+well, in general:
+lists are linear!
+trees are nonlinear!
+
+rules?
+yes! a node can ONLY reference nodes that are its 'children'. it cannot refernce its 'sibling' or 'cousin'
+(usually its a graph if it does that, lil bit of foreshadowing there for ya)
+all the arrows have to point 'down' so to speak. think of how react handles data flow through the dom.
+
+definitions:
+root - top node in a tree
+child - a node directly connected to  another node when moving away from the root
+parent - the converse notion of a child
+leaf - a node with no children
+siblings - nodes that have the same parent
+
+what are the uses of trees?
+- html dom
+- network routing
+- abstract syntax trees (visual code editors that represent code)
+- decision trees in AI (minimax, etc)
+- folders in an operating system
+- json data
+- seriously trees are everywhere learn this well
+
+what are the different kinds of trees?
+there are tons! just look at the wikipedia page!
+we are going to focus on a binary tree
+in a binary tree, each node can have MAX two children nodes.
+0, 1 or 2 but not 3 or more.
+more specifically, a binary search tree, a special case of a binary tree
+in a binary search tree, the elements are sorted
+where every element to the left of a certain node is always less than the parent
+and every element to the right of a certain node is less than the parent
+
+finally we will implement operations on a binary search tree (a pretty common type of tree)

@@ -1,0 +1,7 @@
+FIFO data structure
+think of waiting in line!
+first person in line is the first person out
+
+- used in queues in networking games
+- used in scheduling processes in your pc, etc!
+- a queue in a printer, one at a time
