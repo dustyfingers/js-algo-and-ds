@@ -62,8 +62,12 @@ tree.insert(15);
 tree.insert(9);
 tree.insert(13);
 tree.insert(25);
-
-// console.log(tree);
-
 console.log(tree.find(10));
 console.log(tree.find(2));
+
+// big o of binary search trees
+// O(log n) for insertion (NOT guaranteed - this is AT BEST)
+// O(log n) for searching (NOT guaranteed - this is AT BEST)
+
+// rule of thumb for log n time complexity - 
+// if you DOUBLE the data, you only increase the number of steps for find/insert by ONE
