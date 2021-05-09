@@ -44,3 +44,7 @@ console.log(q);
 
 q.dequeue();
 console.log(q);
+
+// the big o of queues
+// O(1) !! for insertion and removal
+// O(n) for search and access
