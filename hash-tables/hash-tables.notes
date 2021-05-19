@@ -1,4 +1,4 @@
-also known as a hash map
+can also known as a hash map
 
 most languages already have a hash table implemented
 (objects in javascript, dictionaries in python, maps in c# and dart)
@@ -8,4 +8,5 @@ a hash table is used to store key-value pairs!
 almost like an array but the keys are NOT ordered
 hashes are FAST for: finding values, adding new values and removing values
 
-what is a hashing algorithm?
+what is a hashing function?
+a hash function looks up a value by key, by converting the key to a valid array index
