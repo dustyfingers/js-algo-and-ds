@@ -63,7 +63,7 @@ class BinarySearchTree {
         // empty arrays are truthy in javascript
         while (queue.length) {
             currentNode = queue.shift();
-            visited.push(currentNode);
+            visited.push(currentNode.value);
             if (currentNode.left) queue.push(currentNode.left);
             if (currentNode.right) queue.push(currentNode.right);
         }
