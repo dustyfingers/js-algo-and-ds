@@ -1,0 +1,11 @@
+given a tree, how ddo you visit every node 1 (One!) time
+
+this is a classic computer science problem!
+
+two main ways of traversing a tree:
+breadth-first search & depth-first search
+
+bfs works across the tree, horizontally (from smallest value to largest or vice versa)
+dfs works down a tree, vertically (from the root of the tree)
+
+we will learn about both!
