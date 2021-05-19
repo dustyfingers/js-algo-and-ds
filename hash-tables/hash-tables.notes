@@ -10,3 +10,8 @@ hashes are FAST for: finding values, adding new values and removing values
 
 what is a hashing function?
 a hash function looks up a value by key, by converting the key to a valid array index
+
+what makes a good hash function?
+fast! (constant time)
+one way!
+doesnt cluster outputs at specific indices, but distributes uniformly
