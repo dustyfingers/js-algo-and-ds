@@ -1,0 +1,11 @@
+also known as a hash map
+
+most languages already have a hash table implemented
+(objects in javascript, dictionaries in python, maps in c# and dart)
+
+what is a hash table?
+a hash table is used to store key-value pairs!
+almost like an array but the keys are NOT ordered
+hashes are FAST for: finding values, adding new values and removing values
+
+what is a hashing algorithm?
