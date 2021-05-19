@@ -85,7 +85,6 @@ class BinarySearchTree {
         return visited;
     }
 
-    
     depthFirstSearchPostOrder() {
         let visited = [],
             currentNode = this.root;
@@ -100,6 +99,19 @@ class BinarySearchTree {
         return visited;
     }
 
+    depthFirstSearchInOrder() {
+        let visited = [],
+            currentNode = this.root;
+        
+        const dfsHelper = node => {
+            if (node.left) dfsHelper(node.left);
+            visited.push(node.value);
+            if (node.right) dfsHelper(node.right);
+        }
+        
+        dfsHelper(currentNode);
+        return visited;
+    }
 }
 
 let tree = new BinarySearchTree();
@@ -116,6 +128,7 @@ tree.insert(20);
 console.log(tree.breadthFirstSearch());
 console.log(tree.depthFirstSearchPreOrder());
 console.log(tree.depthFirstSearchPostOrder());
+console.log(tree.depthFirstSearchInOrder());
 
 // big o of binary search trees
 // O(log n) for insertion (NOT guaranteed - this is AT BEST)
