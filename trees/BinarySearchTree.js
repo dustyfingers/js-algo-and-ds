@@ -52,6 +52,24 @@ class BinarySearchTree {
         if (!found) return undefined;
         return current;
     }
+
+    breadthFirstSearch() {
+        let queue = [], 
+            visited = [],
+            currentNode = this.root;
+
+        queue.push(currentNode);
+
+        // empty arrays are truthy in javascript
+        while (queue.length) {
+            currentNode = queue.shift();
+            visited.push(currentNode);
+            if (currentNode.left) queue.push(currentNode.left);
+            if (currentNode.right) queue.push(currentNode.right);
+        }
+
+        return visited;
+    }
 }
 
 let tree = new BinarySearchTree();
@@ -62,8 +80,10 @@ tree.insert(15);
 tree.insert(9);
 tree.insert(13);
 tree.insert(25);
-console.log(tree.find(10));
-console.log(tree.find(2));
+// console.log(tree.find(10));
+// console.log(tree.find(2));
+
+console.log(tree.breadthFirstSearch());
 
 // big o of binary search trees
 // O(log n) for insertion (NOT guaranteed - this is AT BEST)
