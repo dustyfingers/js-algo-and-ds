@@ -9,3 +9,7 @@ bfs works across the tree, horizontally (from smallest value to largest or vice 
 dfs works down a tree, vertically (from the root of the tree)
 
 we will learn about both!
+
+when to use bfs or dfs?
+bfs is better for tall, NOT WIDE trees (in general)
+dfs is better for wide, NOT TALL trees (in general)
