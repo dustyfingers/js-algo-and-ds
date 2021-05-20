@@ -1,11 +1,12 @@
 function hash(key, arrLength) {
-    let result = 0;
+    let result = 0,
+        p = 31;
 
-    for (let char of key) {
+    for (let i = 0; i < Math.min(key.length, 100); i++) {
+        let char = key[i];
         let value = char.charCodeAt(0) - 96;
-        result = (result + value) % arrLength;
+        result = (result * p + value) % arrLength;
     }
-
     return result;
 }
 
