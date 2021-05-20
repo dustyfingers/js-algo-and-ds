@@ -1,6 +1,6 @@
 function hash(key, arrLength) {
     let result = 0,
-        p = 31;
+        p = 15485863;
 
     for (let i = 0; i < Math.min(key.length, 100); i++) {
         let char = key[i];
