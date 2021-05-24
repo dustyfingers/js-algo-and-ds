@@ -15,3 +15,8 @@ what makes a good hash function?
 fast! (constant time)
 one way!
 doesnt cluster outputs at specific indices, but distributes uniformly
+
+what about the big o of hash tables?
+insert: O(1)
+delete: O(1)
+access: O(1)
