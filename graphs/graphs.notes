@@ -5,7 +5,7 @@ when are graphs used?
 social networks, location/mapping, routing algorithms (such as in networking)
 recommendation engines, etc
 
-basic terminology:
+basic terminology!
 node = vertex
 connection = edge
 
@@ -15,9 +15,18 @@ trees are actually a special subcase of graphs!
 directed vs undirected graphs
 - in an undirected graph, the connections are 'two-way' and thus have no 
 'polarity': eg, there is no direction associated with an edge, and (A to B) is just as valid as (B to A)
-
 - in a directed graph, each edge has a direction associated with it: eg, (A to B) is valid, where (B to A) is not
 
 weighted vs unweighted graphs
-in a weighted graph, each connection has a value associated with it (to quantify some property about the connection)
-in an unweighted graph, each connection has NO value associated with it 
+- in a weighted graph, each connection has a value associated with it (to quantify some property about the connection)
+- in an unweighted graph, each connection has NO value associated with it 
+
+cool, how to we store graphs in code though???
+two main common ways - the adjancency matrix, and the adjancency list
+- the adjacency matrix is a 2d array associated with each vertex that stores the connection information to other vertices (0 or 1, or whatever)
+- the adjacency list stores the information associated with each vertex in the indices of a list (or in a hash table!)
+  (eg connection info about vertex 1 is stored at index 0 and so on)
+
+which has better time complexity?
+in general adj list takes up less space (with sparse graphs), faster to iterate over all edges (its just a list), can be slower to look up specific edges
+in general adj matrix takes up more space (with sparse graphs), slower to iterate over all edges, but faster to look up specific edge
