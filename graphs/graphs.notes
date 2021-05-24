@@ -5,4 +5,19 @@ when are graphs used?
 social networks, location/mapping, routing algorithms (such as in networking)
 recommendation engines, etc
 
-what are the different types of graphs?
+basic terminology:
+node = vertex
+connection = edge
+
+what are some different types of graphs?
+trees are actually a special subcase of graphs!
+
+directed vs undirected graphs
+- in an undirected graph, the connections are 'two-way' and thus have no 
+'polarity': eg, there is no direction associated with an edge, and (A to B) is just as valid as (B to A)
+
+- in a directed graph, each edge has a direction associated with it: eg, (A to B) is valid, where (B to A) is not
+
+weighted vs unweighted graphs
+in a weighted graph, each connection has a value associated with it (to quantify some property about the connection)
+in an unweighted graph, each connection has NO value associated with it 
