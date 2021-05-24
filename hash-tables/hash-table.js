@@ -3,7 +3,7 @@ class HashTable {
         this.keyMap = new Array(size);
     }
 
-    _hash (key) {
+    _hash(key) {
         let result = 0,
             p = 15485863;
     
@@ -15,9 +15,27 @@ class HashTable {
         return result;
     }
 
-    set (key, value) {
+    set(key, value) {
         let index = this._hash(key);
         if (!this.keyMap[index]) this.keyMap[index] = [];
         this.keyMap[index].push([key, value]);
     }
+
+    get(key) {
+        let index = this._hash(key);
+        if (this.keyMap[index]) {
+            for (let i = 0; i < this.keyMap[index].length; i++) {
+                if (this.keyMap[index][i][0] === key) return this.keyMap[index][i][1];
+            }
+        }
+        return undefined;
+    }
 }
+
+let ht = new HashTable();
+
+ht.set('yellow', '#yellhex');
+ht.set('green', '#grnhex');
+ht.set('red', '#redhex');
+
+console.log(ht.get('yellow'));
