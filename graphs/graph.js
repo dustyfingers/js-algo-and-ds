@@ -22,6 +22,7 @@ class Graph {
             const adjVertex = this.adjacencyList[v].pop();
             this.removeEdge(v, adjVertex);
         }
+        delete this.adjacencyList[v];
     }
 }
 
