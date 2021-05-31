@@ -24,6 +24,17 @@ class Graph {
         }
         delete this.adjacencyList[v];
     }
+
+    recursiveDFS(v) {
+        let res = [],
+            visited = {};
+
+        const dfsHelper = (vt) => {
+            if (!this.adjacencyList[vt]) return undefined;
+        }
+
+        return res;
+    }
 }
 
 let g = new Graph();

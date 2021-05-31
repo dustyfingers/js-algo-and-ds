@@ -29,4 +29,10 @@ two main common ways - the adjancency matrix, and the adjancency list
 
 which has better time complexity?
 in general adj list takes up less space (with sparse graphs), faster to iterate over all edges (its just a list), can be slower to look up specific edges
-in general adj matrix takes up more space (with sparse graphs), slower to iterate over all edges, but faster to look up specific edge
+in general adj matrix takes up more space (with sparse graphs), slower to iterate over all edges, but faster to look up specific edge-
+
+when is graph traversal useful?
+p2p networking
+web crawlers
+finding'closest' matches/recommendations
+shortest path (GPS nav, mazes, AI (shortest path to win game), etc) 
