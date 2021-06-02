@@ -26,8 +26,7 @@ class Graph {
     }
 
     recursiveDFS(start) {
-        const res = [],
-            visited = {};
+        const res = [], visited = {};
 
         const dfsHelper = vt => {
             if (!vt) return undefined;
@@ -39,6 +38,25 @@ class Graph {
         }
         dfsHelper(start);
 
+        return res;
+    }
+    
+    iterativeDFS(start) {
+        const stack = [start], res = [], visited = {};
+        let currentVtx;
+
+        visited[start] = true;
+
+        while(stack.length) {
+            currentVtx = stack.pop();
+            res.push(currentVtx);
+            this.adjacencyList[currentVtx].forEach(neighbor => {
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    stack.push(neighbor);
+                }
+            });
+        }
         return res;
     }
 }
@@ -74,3 +92,4 @@ g.addEdge('miami', 'sydney');
 g.addEdge('lisbon', 'dubai');
 g.addEdge('dallas', 'morocco');
 console.log(g.recursiveDFS('san francisco'));
+console.log(g.iterativeDFS('san francisco'));
