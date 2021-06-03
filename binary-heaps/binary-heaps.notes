@@ -13,3 +13,10 @@ in a MinBinaryHeap, parent nodes are always SMALLER than child nodes.
 
 where are heaps used in the real world? 
 graph traversal, etc
+
+what other data structures can you build with a binary heap?
+binary heaps are often used to implelent 'priority queues'!
+
+what is a priority queue?
+a data structure where each element has a priority associated with it
+elements with higher priority get served before elements with low priority
