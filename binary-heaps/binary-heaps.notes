@@ -1,0 +1,15 @@
+what are binary heaps?
+heaps are a special subset of tree!
+thery are VERY similar to binary search trees, but with some different rules
+like a binary search tree, each node can only have up to 2 (TWO!) children
+but UNLIKE a binray search tree, there is no order between left and right
+aslo UNLIKE a binary search tree, a heap is as compact as posible (sibling nodes must be filled, LTR, before moving on to children)
+the values 'heap' together
+
+what are some different kinds of heaps?
+min heaps vs max heaps
+in a MaxBinaryHeap, parent nodes are always LARGER than child nodes.
+in a MinBinaryHeap, parent nodes are always SMALLER than child nodes.
+
+where are heaps used in the real world? 
+graph traversal, etc
