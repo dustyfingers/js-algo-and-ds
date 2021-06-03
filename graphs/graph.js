@@ -41,11 +41,11 @@ class Graph {
         return res;
     }
     
-    iterativeDFS(start) {
-        const stack = [start], res = [], visited = {};
+    iterativeDFS(startVtx) {
+        const stack = [startVtx], res = [], visited = {};
         let currentVtx;
 
-        visited[start] = true;
+        visited[startVtx] = true;
 
         while(stack.length) {
             currentVtx = stack.pop();
@@ -54,6 +54,23 @@ class Graph {
                 if (!visited[neighbor]) {
                     visited[neighbor] = true;
                     stack.push(neighbor);
+                }
+            });
+        }
+        return res;
+    }
+    
+    iterativeBFS(startVtx) {
+        const queue = [startVtx], res = [], visited = {};
+        let currentVtx;
+
+        while (queue.length) {
+            currentVtx  = queue.shift();
+            res.push(currentVtx);
+            this.adjacencyList[currentVtx].forEach(neighbor => {
+                if (!visited[neighbor]) {
+                    visited[neighbor] = true;
+                    queue.push(neighbor);
                 }
             });
         }
@@ -91,5 +108,6 @@ g.addEdge('tokyo', 'dallas');
 g.addEdge('miami', 'sydney');
 g.addEdge('lisbon', 'dubai');
 g.addEdge('dallas', 'morocco');
-console.log(g.recursiveDFS('san francisco'));
-console.log(g.iterativeDFS('san francisco'));
+// console.log(g.recursiveDFS('san francisco'));
+// console.log(g.iterativeDFS('san francisco'));
+console.log(g.iterativeBFS('san francisco'));
