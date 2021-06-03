@@ -20,3 +20,8 @@ binary heaps are often used to implelent 'priority queues'!
 what is a priority queue?
 a data structure where each element has a priority associated with it
 elements with higher priority get served before elements with low priority
+
+
+what about the big o of binary heaps?
+insertion and deletion - O(log n)
+search - O(n)
