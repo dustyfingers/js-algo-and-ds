@@ -1,0 +1,15 @@
+our first algorithm named after someone!
+
+what is dijkstras algorithm?
+its one of the most important, common algorithms around
+put shortly, its a pathfinding algorithm!
+dijkstras algorithm finds the shortest path between two vertices on a graph
+
+who was dijkstra?
+edsger w. dijkstra was a dutch computer scientist, physicist, essayist and all around smart guy who also
+pioneered a ton of other things in the computer science field (including things like the call stack, concurrency etc)
+
+why is his algorithm so useful?
+used in GPS, network routing, biology (simulate spread of disease)
+airline tickets (shortest combination of flights from a to b)
+and on and on
