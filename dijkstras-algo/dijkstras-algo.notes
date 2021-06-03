@@ -12,4 +12,15 @@ pioneered a ton of other things in the computer science field (including things 
 why is his algorithm so useful?
 used in GPS, network routing, biology (simulate spread of disease)
 airline tickets (shortest combination of flights from a to b)
-and on and on
+and on and on and on
+
+what are the main steps?
+1. every time we want to visit a new node, we pick the node with the smallest known distance
+
+2. once we move to the node we are going to visit, we look at each of its neighbors
+
+3. for each neighbor, we calculate the distance by summing the total edges that lead
+to the node we are checking *from the starting node*.
+
+4. if the new total distance is less than the previous total, we store the new shorter 
+distance for that node
