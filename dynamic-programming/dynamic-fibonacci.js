@@ -7,7 +7,17 @@ const fib = (n, memo=[]) => {
     return res;
 }
 
-console.log(fib(100));
+// the table is also the lookup table for past solutions!
+const fibTab = (n) => {
+    if (n <= 2) return 1;
+    let table = [0, 1, 1];
+    for (let i = 3; i <= n; i++) {
+        table[i] = table[i - 1] + table[i - 2];
+    }
+    return table[n];
+}
+
+console.log(fibTab(100));
 
 // what about the time complexity fo this solution?
 // its.... not good. 
@@ -24,3 +34,9 @@ console.log(fib(100));
 // its time complexity is actually O(n)!
 // way better!
 // at scale, this technique could be very useful in certain contexts...
+
+// enter tabulation!
+// tabulation is another dynamic programming technique that is kind of the 
+// 'bottom-up' counterpart to memoizations 'top-down' approach
+// eg, instead of starting with fib(100) in the call stack,
+// you start with fib(1) and calculate upwards (in this example)
