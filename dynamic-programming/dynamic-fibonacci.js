@@ -1,4 +1,6 @@
 // the memo is like the lookup table for past solutions!
+// now remember since this is a recursive solution when you do higher numbers
+// you will get a stack overflow error
 const fib = (n, memo=[]) => {
     if (memo[n] !== undefined) return memo[n];
     if (n <= 2) return 1;
@@ -8,6 +10,8 @@ const fib = (n, memo=[]) => {
 }
 
 // the table is also the lookup table for past solutions!
+// wont get a stack overflow error wwith higher numbers because you dont have all
+// these function calls on the call stack waiting to be resolved
 const fibTab = (n) => {
     if (n <= 2) return 1;
     let table = [0, 1, 1];
